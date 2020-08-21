@@ -67,7 +67,7 @@ docker run --gpus all --rm -it -d -p 8888:8888 xychelsea/tensorflow:latest-gpu-j
 To build either a GPU-enabled container or without GPUs, use the [tensorflow-docker](https://github.com/xychelsea/tensorflow-docker) GitHub repository.
 
 ```bash
-git clone git://github.com/xychelsea/
+git clone git://github.com/xychelsea/tensorflow-docker.git
 ```
 
 ### Vanilla TensorFlow
