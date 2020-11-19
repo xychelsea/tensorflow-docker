@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-FROM xychelsea/anaconda3:v0.1.1-gpu-jupyter
+FROM xychelsea/anaconda3:v0.1.2-gpu-jupyter
 LABEL description="TensorFlow GPU Container w/ Jupyter Notebooks"
 
 # $ docker build -t xychelsea/tensorflow:latest-gpu-jupyter -f Dockerfile.nvidia-jupyter .
