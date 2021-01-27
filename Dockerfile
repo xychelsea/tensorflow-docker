@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-FROM xychelsea/anaconda3:v0.1.2
+FROM xychelsea/anaconda3:v0.1.3
 LABEL description="TensorFlow Vanilla Container"
 
 # $ docker build -t xychelsea/tensorflow:latest -f Dockerfile .
@@ -40,7 +40,8 @@ RUN conda update -c defaults conda
 
 # Install TensorFlow
 RUN conda create -n tensorflow_env tensorflow \
-    && conda install -c conda-forge tensorflow \
+    && conda install -c conda-forge pip \
+    && pip3 install tensorflow==2.4.0 \
     && rm -rvf ${ANACONDA_PATH}/share/jupyter/lab/staging
 
 # Switch back to root
