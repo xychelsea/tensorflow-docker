@@ -39,9 +39,18 @@ WORKDIR ${HOME}
 RUN conda update -c defaults conda
 
 # Install TensorFlow
-RUN conda create -n tensorflow_env tensorflow \
-    && conda install -c conda-forge pip \
-    && pip3 install tensorflow==2.4.0 \
+RUN conda create -c conda-forge -n tensorflow_env \
+        ca-certificates==2020.12.5 \
+        chardet==3.0.4 \
+        idna==2.10 \
+        python==3.8.6 \
+        setuptools==49.6.0 \
+        six==1.15.0 \
+        tensorboard==2.4.1 \
+        tensorboard-plugin-wit==1.8.0 \
+        werkzeug==1.0.1 \
+        wheel==0.36.2 \
+    && pip install tensorflow==2.4.1 \
     && rm -rvf ${ANACONDA_PATH}/share/jupyter/lab/staging
 
 # Switch back to root
